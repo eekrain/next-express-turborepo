@@ -1,11 +1,14 @@
 {
   "extends": "@monorepo/tsconfig/next.json",
   "compilerOptions": {
+    "paths": {
+      "~/*": ["./src/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -15,7 +18,5 @@
     "tailwind.config.ts",
     "eslint.config.mjs"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
