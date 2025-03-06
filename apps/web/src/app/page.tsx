@@ -1,6 +1,8 @@
 "use client";
 
 import { Leaf } from "lucide-react";
+
+import { GetTest } from "~/components/test";
 import { Button } from "~/components/ui/button";
 
 export default function Home() {
@@ -9,6 +11,8 @@ export default function Home() {
       <p>Hello world</p>
       <Button onClick={() => alert("Test")}>Test</Button>
       <Leaf />
+
+      <GetTest />
     </div>
   );
 }
