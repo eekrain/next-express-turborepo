@@ -20,7 +20,6 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_API_URL=http://server:3001
     depends_on:
       - server
 
