@@ -2,7 +2,7 @@ import * as http from "node:http";
 
 import app from "./app";
 
-const port = 3001;
+const port = 5000;
 
 const init = async (): Promise<void> => {
   const server = http.createServer(app);

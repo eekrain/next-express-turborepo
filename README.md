@@ -32,7 +32,7 @@ The monorepo is organized as follows:
 - **/apps/web**: Contains the Next.js application responsible for the frontend.
 - **/apps/server**: Contains the Express.js application responsible for the backend.
 - **/packages/tsconfig**: Contains shared configurations (e.g., Eslint, Tailwind, Turbopack) to enforce consistency across the monorepo.
-- **/packages/eslint-config**: Contains shared Eslint configurations for the monorepo. 
+- **/packages/eslint-config**: Contains shared Eslint configurations for the monorepo.
 - **/packages/types**: Contains shared types (e.g. responses, api clients, etc).
 - **/packages/ui**: Houses the shared UI components built with shadcn and Tailwind CSS.
 - **/packages/utils**: Contains shared utils methods that will be used in multiple apps or packages.
@@ -63,7 +63,7 @@ The monorepo is organized as follows:
    ```
 
    - Frontend is served at `http://localhost:3000` (Next.js)
-   - Backend is served at `http://localhost:3001` (Express.js)
+   - Backend is served at `http://localhost:5000` (Express.js)
 
 4. **Build for Production**
 

@@ -24,7 +24,7 @@ COPY --from=server-builder /prod/server/node_modules /prod/server/node_modules
 COPY --from=server-builder /prod/server/dist /prod/server/dist
 COPY --from=server-builder /prod/server/package.json /prod/server/package.json
 WORKDIR /prod/server
-EXPOSE 3001
+EXPOSE 5000
 CMD [ "pnpm", "start" ]
 
 FROM base AS web
