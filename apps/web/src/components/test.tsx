@@ -35,7 +35,7 @@ export const GetTest = () => {
   }, []);
 
   return (
-    <Card className="w-full">
+    <Card className="max-w-lg">
       <CardHeader>
         <h3
           className={cn(
@@ -45,7 +45,7 @@ export const GetTest = () => {
             error && "text-red-500"
           )}
         >
-          ASUUUUUUUUUUUUUUU KOWE
+          Express backend test
         </h3>
       </CardHeader>
       <CardContent>
@@ -54,7 +54,7 @@ export const GetTest = () => {
         {loading ? (
           <div className="flex items-center gap-2 text-muted-foreground">
             <Loader2 className="h-4 w-4 animate-spin" />
-            Testing API connection...
+            Hitting API connection...
           </div>
         ) : error ? (
           <p className="text-red-500">{error}</p>

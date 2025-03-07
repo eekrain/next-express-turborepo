@@ -1,16 +1,13 @@
 "use client";
 
-import { Leaf } from "lucide-react";
-
 import { GetTest } from "~/components/test";
-import { Button } from "~/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="text-3xl font-semibold text-red-600 underline">
-      <p>Kontol kau</p>
-      <Button onClick={() => alert("Test")}>Apa anjg?</Button>
-      <Leaf />
+    <div className="flex flex-col items-center justify-center gap-8">
+      <h1 className="text-3xl font-semibold text-red-600 underline">
+        Hello world!
+      </h1>
 
       <GetTest />
     </div>
