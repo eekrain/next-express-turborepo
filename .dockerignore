@@ -6,3 +6,5 @@ node_modules
 *.md
 dist
 .next
+docker-compose
+Dockerfile

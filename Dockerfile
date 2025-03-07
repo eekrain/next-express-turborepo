@@ -18,8 +18,6 @@ RUN pnpm deploy --filter=server --prod /prod/server
 FROM deps AS web-builder
 WORKDIR /usr/src/app
 RUN pnpm run build --filter=web
-COPY ./apps/web/.next/standalone /prod/web/
-COPY ./apps/web/.next/static /prod/web/apps/web/.next/static
 
 FROM base AS server
 COPY --from=server-builder /prod/server/node_modules /prod/server/node_modules
@@ -30,10 +28,11 @@ EXPOSE 3001
 CMD [ "pnpm", "start" ]
 
 FROM base AS web
-COPY --from=web-builder /prod/web /prod/web
 WORKDIR /prod/web
+COPY --from=web-builder /usr/src/app/apps/web/.next/standalone ./
+COPY --from=web-builder /usr/src/app/apps/web/.next/static ./.next/static
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 EXPOSE 3000
-CMD [ "node", "apps/web/server.js" ]
+CMD [ "node", "server.js" ]

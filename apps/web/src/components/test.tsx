@@ -13,11 +13,13 @@ export const GetTest = () => {
   const [test, setTest] = useState<string>("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<null | string>(null);
+  const URL_TEST = `${process.env.NEXT_PUBLIC_API_URL}/example/test`;
+  console.log("🚀 ~ GetTest ~ URL_TEST:", URL_TEST);
 
   useEffect(() => {
     const fetchTest = async () => {
       try {
-        const response = await fetch("http://localhost:3001/example/test");
+        const response = await fetch(URL_TEST);
         if (!response.ok) throw new Error("Failed to fetch data");
         const data: GetTestResponse = await response.json();
         setTimeout(() => {
@@ -43,10 +45,12 @@ export const GetTest = () => {
             error && "text-red-500"
           )}
         >
-          API Connection Test
+          ASUUUUUUUUUUUUUUU KOWE
         </h3>
       </CardHeader>
       <CardContent>
+        <p className="mb-4">{URL_TEST}</p>
+
         {loading ? (
           <div className="flex items-center gap-2 text-muted-foreground">
             <Loader2 className="h-4 w-4 animate-spin" />
